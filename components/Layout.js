@@ -1,3 +1,4 @@
+import Header from "./Header";
 import Footer from "./Footer";
 import {useContext, useEffect, useState} from "react";
 import {ProductsContext} from "./ProductsContext";
@@ -13,9 +14,10 @@ export default function Layout({children}) {
   }, []);
   return (
     <div>
+      <Header />
       <div className="p-5">
         {success && (
-          <div className="mb-5 bg-green-400 text-white text-lg p-5 rounded-xl">
+          <div className="mb-5 bg-green-400 text-white text-lg p-5 rounded-xl sm:z-20">
             Thanks for your order!
           </div>
         )}
